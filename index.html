@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Netflix</title>
 </head>
+
 <body>
-    <h1>hello</h1>
+    <div id="header">
+        <div class="header-cont container">
+            <div class="left-cont">
+                <img class="header-brand" src="./images/Netflix_Logo_PMS.png" alt="image error :(">
+                <ul class="main-nav">
+                    <li class="nav-item active">Home</li>
+                    <li class="nav-item">Tv Shows</li>
+                    <li class="nav-item">Movies</li>
+                    <li class="nav-item">News & Popular</li>
+                    <li class="nav-item">My List</li>
+                    <li class="nav-item">Browse by Languages</li>
+                </ul>
+            </div>
+            <div class="right-cont">
+                <i class="fa fa-solid fa-magnifying-glass"></i>
+                <i class="fa fa-solid fa-bell"></i>
+                <img class="user-img" src="./images/netflix-user.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="movies-cont container" id="movies-cont">
+        <div class="movies-section">
+            <h2 class="movie-section-heading">Trending Now <span class="explore-nudge">Explore All ></span></h2>
+            <div class="movies-row">
+                <img class="movie-item" src="https://occ-0-6335-3647.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTwPfIT3_obHiuYG2VDTuM-wHN1E4JiCguBBtTz7jEX79fgs4vfSMM8KGLiep2bND3tjpJS7lAGUBCAmA3vkhQ-Ue7uhrz66RbE.jpg?r=7ac"alt="">
+                <img class="movie-item" src="https://occ-0-6335-3647.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTq1sk7RnGz6KIVhQUwMMD4LZp7_qbezjQK35MICw4_4CDT6aohwFN8VUgg-8A4j-7WFCwK2zC4dsn7Be6-MZzOJhrq8jNvA_q8.jpg?r=9d9"alt="">
+                <img class="movie-item" src="https://occ-0-6335-3647.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABfRpVj5WBp8sQTf_idMdosIL6vaVwoCvgvItarnfYMKzA-TA0VfiNJEYZsBD6XogX6ks1iwJI0gq9GHKkUuYTnSQI_fmAbAveFg.jpg?r=c1f"alt="">
+                <img class="movie-item" src="https://occ-0-6335-3647.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUTlD4bA8M_D3_ndHsR0laddG_-6DYDM40k48kk0G0bNXLZOxVCjGlJDlbdzuBQ3QynTEq6BJm9JmquXksCD-7su-mQZI_72Peo.jpg?r=cce"alt="">
+                <img class="movie-item" src="https://occ-0-6335-3647.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABcyzs7izkNIIYluMU-khOfkKNWkc2qVQYCjuxOjjRGFfzTqSzDsFoh6PgABjqTVTMUWK9o_rRfOo2zSJykWM1FKbtOrCU2N0FD4.jpg?r=ecb"alt="">
+            </div>
+        </div>
+    </div>
+
 </body>
+<script src="main.js"></script>
+
 </html>
