@@ -1,6 +1,7 @@
-
 const apikey="4b4eeaf622d793c298c088a0d7ebdd7c";
 const apiEndpoint="https://api.themoviedb.org/3";
+const imgPath='https://image.tmdb.org/t/p/original';
+
 const apiPaths={
     fetchAllCategories:`${apiEndpoint}/genre/movie/list?api_key=${apikey}`,
     fetchMoviesList:(id)=>`${apiEndpoint}/discover/movie?api_key=${apikey}&with_genres=${id}`
@@ -36,13 +37,26 @@ const fetchAndBuildMovieSection=(fetchUrl,category)=>{
 const buildMoviesSection=(list,categoryName)=>{
     console.log(list,categoryName);
     const moviesCont=document.getElementById('movies-cont');
-    list.map(item=>{
+    const moviesListHtml=list.map(item=>{
         return `
-
+            <img class='movie-item' src='${imgPath}${item.backdrop_path}' alt='${item.title}'>
         `;
-    })
+    }).join('');
 
-    
+    const moviesSectionHtml=`
+        <h2 class="movie-section-heading">${categoryName} <span class="explore-nudge">Explore All ></span></h2>
+        <div class="movies-row">
+            ${moviesListHtml}
+        </div>
+    `;
+
+    console.log(moviesSectionHtml);
+    const div=document.createElement('div');
+    div.className='movies-section';
+    div.innerHTML=moviesSectionHtml;
+
+    moviesCont.append(div);
+
 
 }
 window.addEventListener('load',()=>{
